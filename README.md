@@ -1,7 +1,7 @@
 # About
 This is a JNA wrapper around the Chroma syntax highlighter (written in Go). It exposes two highlight methods.
 
-Read the Chroma docs on how to use Chroma https://github.com/rroller/chroma4j
+Read the Chroma docs on how to use Chroma https://github.com/alecthomas/chroma
 
 # Building
 ```bash
