@@ -1,0 +1,11 @@
+*.iml
+.idea/
+build/
+local.properties
+*.private
+/target/
+.classpath
+.project
+.settings/
+chroma.h
+chroma.so
