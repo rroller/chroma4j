@@ -1,0 +1,17 @@
+dist: trusty
+sudo: false
+language: java
+jdk: oraclejdk9
+before_install:
+  - GIMME_OUTPUT="$(gimme 1.9 | tee -a $HOME/.bashrc)" && eval "$GIMME_OUTPUT"
+  - export GOPATH=$HOME/gopath
+  - export PATH=$HOME/gopath/bin:$PATH
+  - export PROJECT=github.com/rroller/chroma4j
+  - mkdir -p $HOME/gopath/src/$PROJECT
+  - rsync -az ${TRAVIS_BUILD_DIR}/ $HOME/gopath/src/$PROJECT/
+  - export TRAVIS_BUILD_DIR=$HOME/gopath/src/$PROJECT
+  - cd $HOME/gopath/src/$PROJECT
+install:
+  - sh ./build-go.sh
+  - mvn clean compile
+script: mvn test

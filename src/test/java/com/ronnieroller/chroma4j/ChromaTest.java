@@ -38,7 +38,7 @@ public class ChromaTest {
                 .build();
 
         String result = Chroma.highlightAsHtml(source, lexer, style, options);
-        Assert.assertTrue(result.startsWith("<pre class=\"chroma\"><span class=\"cm\">/*"));
+        Assert.assertTrue(result.startsWith("<pre class=\"chroma\"><span class=\"ln\">  1</span><span class=\"cm\">/*"));
         Assert.assertTrue(result.contains("<span class=\"kd\">public</span> <span class=\"kd\">static</span> <span class=\"o\">&lt;</span>"));
     }
 
