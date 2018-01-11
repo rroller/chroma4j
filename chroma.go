@@ -6,12 +6,13 @@ package main
 import "C"
 
 import (
+	"bytes"
+
+	"github.com/alecthomas/chroma"
 	"github.com/alecthomas/chroma/formatters/html"
 	"github.com/alecthomas/chroma/lexers"
 	"github.com/alecthomas/chroma/quick"
 	"github.com/alecthomas/chroma/styles"
-	"bytes"
-	"github.com/alecthomas/chroma"
 )
 
 func main() {
@@ -48,7 +49,6 @@ func highlightAsHtml(source, lexer, style string, htmlTabWidthFlag int, htmlBase
 		l = lexers.Fallback
 	}
 	l = chroma.Coalesce(l)
-
 
 	// Determine style.
 	s := styles.Get(style)
