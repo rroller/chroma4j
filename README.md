@@ -22,6 +22,11 @@ HtmlOptions options = HtmlOptions.builder()
 String result = Chroma.highlightAsHtml(source, lexer, style, options);
 ```
 
+# Developing
+## Dependencies
+Java dependencies are managed with Maven in the [pom.xml](pom.xml).
+
+Go dependencies are managed with [dep](https://github.com/golang/dep) in the [Gopkg.toml](Gopkg.toml) file and [vendor](vendor) directory.
 # TODO/Not done
 * This is not exported to Maven Central -- You'll need to build it yourself
 * I haven't tested it beyond a Mac
