@@ -5,6 +5,8 @@ Read the Chroma docs on how to use Chroma https://github.com/alecthomas/chroma.
 
 This exists because there's not a good server side syntax highlighter in Java (that I could find). Chroma is fast and follows the popular pygments python library.
 
+[![Build Status](https://travis-ci.org/rroller/chroma4j.svg?branch=master)](https://travis-ci.org/rroller/chroma4j)
+
 # Building
 ```bash
 go build -o chroma.so -buildmode=c-shared chroma.go
